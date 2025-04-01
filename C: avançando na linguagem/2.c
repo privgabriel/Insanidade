@@ -17,9 +17,9 @@ void chuta() {
     scanf(" %c", &chute);
 
     chutes[tentativas] = chute;
+    tentativas++;
 }
 
-// Essa função não foi discutida no último vídeo
 int jachutou(char letra) {
     int achou = 0;
     for(int j = 0; j < tentativas; j++) {
@@ -32,7 +32,6 @@ int jachutou(char letra) {
     return achou;
 }
 
-// Essa função não foi discutida no último vídeo
 void desenhaforca() {
 
     printf("Você já deu %d chutes\n", tentativas);
@@ -50,7 +49,6 @@ void desenhaforca() {
 
 }
 
-// Essa função não foi discutida no último vídeo
 void escolhepalavra() {
     sprintf(palavrasecreta, "MELANCIA");
 }
@@ -67,8 +65,6 @@ int main() {
 
         desenhaforca();
         chuta();
-
-        tentativas++;
 
     } while (!acertou && !enforcou);
 
